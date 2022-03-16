@@ -14,6 +14,8 @@ import Contact from "../pages/Contact";
 
 import MenuBar from "../components/MenuBar"
 
+import AppLogo from "../files/cyber-security.png"
+
 export default function FixedBottomNavigation() {
   const [value, setValue] = useState(0);
   const ref = useRef(null);
@@ -49,7 +51,7 @@ export default function FixedBottomNavigation() {
             }}
           >
             <img
-              src="https://cdn-icons.flaticon.com/png/512/3540/premium/3540763.png?token=exp=1647452343~hmac=31d1b2a45a95b84acc5bbb66c37ac8ec"
+              src={AppLogo}
               alt="new Icon"
               height={30}
               width={30}
@@ -57,13 +59,17 @@ export default function FixedBottomNavigation() {
                 margin: 10,
               }}
             />
-            <h2 style={{
-              fontWeight: 400,
-              fontFamily: "sans-serif",
-              letterSpacing: 2
-            }}>Thunder Repair</h2>
+            <h2
+              style={{
+                fontWeight: 400,
+                fontFamily: "sans-serif",
+                letterSpacing: 2,
+              }}
+            >
+              Thunder Repair
+            </h2>
           </div>
-            <MenuBar />
+          <MenuBar />
         </div>
         <BottomNavigation
           showLabels
