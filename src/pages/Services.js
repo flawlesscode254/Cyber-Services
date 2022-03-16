@@ -10,7 +10,7 @@ export default function RowAndColumnSpacing() {
         alignItems: "center",
         flexDirection: "row",
         flexWrap: "wrap",
-        marginTop: 80
+        marginTop: 100
       }}>
         <ServicesCard
           title={"Phone Flashing"}

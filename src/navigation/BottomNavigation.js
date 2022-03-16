@@ -12,14 +12,14 @@ import Services from "../pages/Services";
 import Providers from "../pages/Providers";
 import Contact from "../pages/Contact";
 
+import MenuBar from "../components/MenuBar"
+
 export default function FixedBottomNavigation() {
   const [value, setValue] = useState(0);
   const ref = useRef(null);
 
   return (
-    <Box
-      ref={ref}
-    >
+    <Box ref={ref}>
       <List>
         {value === 0 ? <Services /> : value === 1 ? <Providers /> : <Contact />}
       </List>
@@ -32,6 +32,39 @@ export default function FixedBottomNavigation() {
         }}
         elevation={3}
       >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexDirection: "row",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <img
+              src="https://cdn-icons.flaticon.com/png/512/3540/premium/3540763.png?token=exp=1647452343~hmac=31d1b2a45a95b84acc5bbb66c37ac8ec"
+              alt="new Icon"
+              height={30}
+              width={30}
+              style={{
+                margin: 10,
+              }}
+            />
+            <h2 style={{
+              fontWeight: 400,
+              fontFamily: "sans-serif",
+              letterSpacing: 2
+            }}>Thunder Repair</h2>
+          </div>
+            <MenuBar />
+        </div>
         <BottomNavigation
           showLabels
           value={value}
